@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan' , sans-serif;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url("/BubbleFront/Images/grr.png ");
+    background-size:cover ;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: transparent;
+   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);*/
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.logo{
+    width: 150px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: #5355e8;
+
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #5355e8;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.login form input {
+    width: 290px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #e6e6e6;
+    border: none;
+    margin: 5px 0;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.login h1 {
+    margin-top: 0px;
+    padding: 10px 20px;
+}
+
+.login__button {
+    margin: 20px 0;
+    width: 290px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #57b846;
+}
+.login__button:hover{
+    cursor: pointer;
+    padding-bottom: 4px;
+}
+
+.login .error {
+    display: none;
+    color:red;
+}
